@@ -229,3 +229,40 @@ function multiplyAll(arr) {
   multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
 
 // 22.
+function sum(arr, n) {
+    if(n <= 0) {
+      return 0;
+    } else {
+      return sum(arr, n - 1) + arr[n - 1];
+    }
+  }
+
+// 23.
+function lookUpProfile(name, prop) {
+    for (let i = 0; i < contacts.length; i++) {
+      if (contacts[i].firstName === name) {
+        if (prop in contacts[i]) {
+          return contacts[i][prop];
+        } else {
+          return "No such property";
+        }
+      }
+    }
+    return "No such contact";
+  }
+
+//24.
+function randomFraction() {
+    var result = 0;
+    while (result === 0) {
+      result = Math.random();
+    }
+    return result;
+  }
+
+// 25.
+function randomRange(myMin, myMax) {
+    return Math.floor(Math.random() * (myMax - myMin + 1) + myMin);
+  }
+  
+
