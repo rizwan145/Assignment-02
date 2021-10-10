@@ -5,6 +5,7 @@ var myDog ={
     "tails" : 1,
     "friends" : ["caty","doggy"]
 };
+console.log(myDog)
 
 //2.
 var testObject = {
@@ -179,6 +180,7 @@ var myObj = {
         }
         return records;
       }
+      console.log(recordCollection);
 
     // 15.
     var myArray = [];
@@ -187,32 +189,37 @@ var myObj = {
     myArray.push(i);
     i--;
 }
+console.log(myArray)
 
 // 16.
 var myArray = [];
 for (var i = 1; i < 6; i++) {
   myArray.push(i);
 }
+console.log(myArray)
 
 // 17.
 var myArray = [];
 for (var i = 1; i < 10; i += 2) 
 {  myArray.push(i);
 }
+console.log(myArray)
+
 
 //18.
 var myArray = [];
 for (var i = 9; i > 0; i -= 2) {
   myArray.push(i);
 }
+console.log(myArray);
 
 // 19.
 var total = 0;
 var myArr =[20];
 for (var i = 0; i < myArr.length; i++) {
   total += myArr[i];
-  console.log(total);
 }
+console.log(total);
 
 // 20.
 // same as 19.
@@ -238,6 +245,7 @@ function sum(arr, n) {
       return sum(arr, n - 1) + arr[n - 1];
     }
   }
+  console.log(sum);
 
 // 23.
 function lookUpProfile(name, prop) {
@@ -252,6 +260,7 @@ function lookUpProfile(name, prop) {
     }
     return "No such contact";
   }
+  console.log(lookUpProfile);
 
 //24.
 function randomFraction() {
@@ -261,10 +270,99 @@ function randomFraction() {
     }
     return result;
   }
+  console.log(randomFraction) ;
 
 // 25.
 function randomRange(myMin, myMax) {
     return Math.floor(Math.random() * (myMax - myMin + 1) + myMin);
   }
+  console.log(randomRange) ;
   
+// 26.
+function convertToInteger(str) {
+  return parseInt(str);
+}
+convertToInteger("77");
+console.log(convertToInteger);
+
+// 27.
+function checkEqual(a, b) {
+
+  return a === b ? "true" : "False";
+}
+
+
+console.log(checkEqual(1, 2));
+
+// 28.
+function checkSign(num) {
+  return num > 0 ? "positive" : num < 0 ? "negative" : "zero"
+}
+
+console.log (checkSign(10));
+
+// 29.
+function countdown(n){
+
+  if (n < 1) {
+    return [];
+  } else {
+    const arr = countdown(n - 1);
+    arr.unshift(n);
+    return arr;
+  }
+}
+console.log(countdown);  
+
+// 30.
+function countdown(n){
+
+  if (n < 1) {
+    return [];
+  } else {
+    const arr = countdown(n - 1);
+    arr.unshift(n);
+    return arr;
+  }
+}
+console.log(countdown);  
+
+// 31.
+function rangeOfNumbers(startNum, endNum) {
+
+  if (endNum - startNum === 0) {
+    return [startNum];
+  } else {
+    var numbers = rangeOfNumbers(startNum, endNum - 1);
+    numbers.push(endNum);
+    return numbers;
+  }
+}
+console.log(rangeOfNumbers);
+
+// 32.
+function countdown(n){
+
+      if (n < 1) {
+        return [];
+       } else {
+        const arr = countdown(n - 1);
+        arr.unshift(n);
+        return arr;
+      }
+     }
+    console.log(countdown);  
+
+// 33.
+function rangeOfNumbers(startNum, endNum) {
+
+  if (endNum - startNum === 10) {
+    return [startNum];
+  } else {
+    var numbers = rangeOfNumbers(startNum, endNum - 1);
+    numbers.push(endNum);
+    return numbers;
+  }
+}
+console.log(rangeOfNumbers);
 
