@@ -208,8 +208,10 @@ for (var i = 9; i > 0; i -= 2) {
 
 // 19.
 var total = 0;
+var myArr =[20];
 for (var i = 0; i < myArr.length; i++) {
   total += myArr[i];
+  console.log(total);
 }
 
 // 20.
